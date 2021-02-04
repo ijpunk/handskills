@@ -1,0 +1,1009 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the HandheldFriendly -->
+	<meta name="HandheldFriendly" content="True">
+	<!-- set the description -->
+	<meta name="description" content="HANDSKILLS APP">
+	<!-- set the Keyword -->
+	<meta name="keywords" content="">
+	<meta name="author" content="handskills app">
+	<!-- set the page title -->
+	<title>HANDSKILLS</title>
+	<!-- include google roboto font cdn link -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<!-- include the site bootstrap stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/colors.css' %}">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!-- include the site responsive stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="images">
+</head>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- header of the page -->
+		<header id="page-header" class="page-header-stick">
+			<!-- top bar -->
+			<div class="top-bar bg-dark text-gray">
+				<div class="container">
+					<div class="row top-bar-holder">
+						<div class="col-xs-9 col">
+							<!-- bar links -->
+							<ul class="font-lato list-unstyled bar-links">
+								<li>
+									<a href="tel:+2343855303">
+										<strong class="dt element-block text-capitalize hd-phone">Call :</strong>
+										<strong class="dd element-block hd-phone">+(234) 8113855303 </strong>
+										<i class="fas fa-phone-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">phone</span></i>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="col-xs-3 col justify-end">
+							<!-- user links -->
+							<ul class="list-unstyled user-links fw-bold font-lato">
+								<li><a href="#popup1" class="lightbox">Login</a> <span class="sep">|</span> <a href="#popup2" class="lightbox">Register</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- header holder -->
+			<div class="header-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3">
+							<!-- logo -->
+							<div class="logo">
+								<a href="home.html">
+									<img class="hidden-xs" src="{% static 'images/logo.png' %}" alt="studylms">
+									<img class="hidden-sm hidden-md hidden-lg" src="[% static 'images/logo-dark.png' %}" alt="studylms">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-9 static-block">
+							<!-- nav -->
+							<nav id="nav" class="navbar navbar-default">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<!-- navbar collapse -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<!-- main navigation -->
+									<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
+										<li>
+											<a href="home.html" role="button" aria-haspopup="true" aria-expanded="false">home</a>
+											
+										</li>
+										<li class="dropdown">
+											<a href="courses-list.html" 
+											role="button" aria-haspopup="true" aria-expanded="false">artisans</a>
+											
+									
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+											<ul class="dropdown-menu">
+												<li><a href="about-us.html">About us</a></li>
+												<li><a href="instructors-list.html">workers List</a></li>								
+											   <li><a href="login-register.html">Login &amp; Register</a></li>
+											</ul>
+										</li>
+										<li><a href="contact.html">CONTACT</a></li>
+									</ul>
+								</div>
+								<!-- navbar form -->
+								<form action="#" class="navbar-form navbar-search-form navbar-right">
+									<a class="fas fa-search search-opener" role="button" data-toggle="collapse" href="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse"><span class="sr-only">search opener</span></a>
+									<!-- search collapse -->
+									<div class="collapse search-collapse" id="searchCollapse">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Search &hellip;">
+											<button type="button" class="fas fa-search btn"><span class="sr-only">search</span></button>
+										</div>
+									</div>
+								</form>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- contain main informative part of the site -->
+		<main id="main">
+			<!-- intro block -->
+			<section class="intro-block">
+				<div class="slider fade-slider">
+					<div>
+						<!-- intro block slide -->
+						<article class="intro-block-slide overlay bg-cover" style="background-image: url({% static 'images/homepage.jpg' %}) ;">
+							<div class="align-wrap container">
+								<div class="align">
+									<div class="anim">
+										<h1 class="intro-block-heading">HANDSKILLS <p>The Home Of Artisans</p></h1>
+									</div>
+									
+									<div class="anim delay1">
+										<p>This is a platform where all artisans and thier client meets </p>
+									</div>
+									<div class="anim delay2">
+										<div class="btns-wrap">
+											<a href="courses-list.html" class="btn btn-warning btn-white text-uppercase">OUR ARTISANS</a>
+											<a href="login-register.html" class="btn btn-warning btn-theme text-uppercase">sign up to GET STARTED</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div>
+						<!-- intro block slide -->
+						<article class="intro-block-slide overlay bg-cover" style="background-image: url(images/de-base.png);">
+							<div class="align-wrap container">
+								<div class="align">
+									<div class="anim">
+										<h1 class="intro-block-heading">Education Organization</h1>
+									</div>
+									<div class="anim delay1">
+										<p>We offer the most complete course pakage in the country, for the research, design and development of Education.</p>
+									</div>
+									<div class="anim delay2">
+										<div class="btns-wrap">
+											<a href="courses-list.html" class="btn btn-warning btn-theme text-uppercase">Our Courses</a>
+											<a href="contact.html" class="btn btn-white text-uppercase">Contact us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div>
+						<!-- intro block slide -->
+						<article class="intro-block-slide overlay bg-cover" style="background-image: url(http://placehold.it/1920x823);">
+							<div class="align-wrap container">
+								<div class="align">
+									<div class="anim">
+										<h1 class="intro-block-heading">Training Organization</h1>
+									</div>
+									<div class="anim delay1">
+										<p>We offer the most complete course pakage in the country, for the research, design and development of Education.</p>
+									</div>
+									<div class="anim delay2">
+										<div class="btns-wrap">
+											<a href="courses-list.html" class="btn btn-warning btn-theme text-uppercase">Our Courses</a>
+											<a href="contact.html" class="btn btn-white text-uppercase">Contact us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="container">
+					<!-- features aside -->
+					<aside class="features-aside">
+						<a href="#" class="col">
+							<span class="icn-wrap text-center no-shrink">
+								<img src="images/icon01.svg" width="44" height="43" alt="trophy">
+							</span>
+							<div class="description">
+								<h2 class="features-aside-heading">World’d Best Artisans</h2>
+							</div>
+						</a>
+						<a href="#" class="col">
+							<span class="icn-wrap text-center no-shrink">
+								<img src="images/icon02.svg" width="43" height="39" alt="computer">
+							</span>
+							<div class="description">
+								<h2 class="features-aside-heading">Contact your artisan here</h2>
+							</div>
+						</a>
+						<a href="#" class="col">
+							<span class="icn-wrap text-center no-shrink">
+								<img src="images/icon03.svg" width="43" height="39" alt="computer">
+							</span>
+							<div class="description">
+								<h2 class="features-aside-heading">Artisans Database</h2>
+								
+							</div>
+						</a>
+					</aside>
+				</div>
+			</section>
+			<!-- popular posts block -->
+			<section class="popular-posts-block container">
+				<header class="popular-posts-head">
+					<h2 class="popular-head-heading">Most Popular workers</h2>
+				</header>
+				<div class="row">
+					<!-- popular posts slider -->
+					<div class="slider popular-posts-slider">
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="images/jamiu.jpg" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-primary text-white font-lato text-uppercase price-tag">N1000/hr</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html"> Expert in all PLUMBING work</a></h3>
+									<div class="post-author">
+										<div class="alignleft rounded-circle no-shrink">
+											<a href="instructor-single.html"><img src="images/jamiu.jpg" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html"> IBRAHEEM JAMIU</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">98</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">10</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="images/jamiu.jpg" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-success text-white font-lato text-uppercase price-tag">Free</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html"> Expert in all PLUMBING WORKS</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="images/jamiu.jpg" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html"> IBRAHEEM JAMIU</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">150</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">3</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="far fa-star"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="images/jamiu.jpg" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-primary text-white font-lato text-uppercase price-tag">$85.60</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html">expert in all PLUMBING WORKS</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="images/jamiu.jpg" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html"> IBRAHEEM JAMIU</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">200</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">3</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="far fa-star-half"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="images/jamiu.jpg" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-primary text-white font-lato text-uppercase price-tag">$68.00</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html">Expert in all PLUMBING works</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html">Peter Parker</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">48</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">5</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="http://placehold.it/262x212" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-primary text-white font-lato text-uppercase price-tag">$99.00</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html">French for Beginners to Advanced Training</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html">Keny White</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">98</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">10</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="http://placehold.it/262x212" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-success text-white font-lato text-uppercase price-tag">Free</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html">Introduction to Mobile Apps Development</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html">Sarah Johnson</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">200</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">3</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="far fa-star"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="http://placehold.it/262x212" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-primary text-white font-lato text-uppercase price-tag">$85.60</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html">How to Become a Startup Founder</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html">Jhon Milton</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">200</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">3</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="far fa-star-half"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+						<div>
+							<div class="col-xs-12">
+								<!-- popular post -->
+								<article class="popular-post">
+									<div class="aligncenter">
+										<img src="http://placehold.it/262x212" alt="image description">
+									</div>
+									<div>
+										<strong class="bg-primary text-white font-lato text-uppercase price-tag">$68.00</strong>
+									</div>
+									<h3 class="post-heading"><a href="course-single.html">Your Complete Guide to Self Devlopement</a></h3>
+									<div class="post-author">
+										<div class="alignleft no-shrink rounded-circle">
+											<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
+										</div>
+										<h4 class="author-heading"><a href="instructor-single.html">Peter Parker</a></h4>
+									</div>
+									<footer class="post-foot gutter-reset">
+										<ul class="list-unstyled post-statuses-list">
+											<li>
+												<a href="#">
+													<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
+													<strong class="text fw-normal">48</strong>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
+													<strong class="text fw-normal">5</strong>
+												</a>
+											</li>
+										</ul>
+										<ul class="star-rating list-unstyled">
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+											<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- counter aside -->
+			<aside class="bg-cover counter-aside" style="background-image: url(images/saw.jpg);">
+				<div class="container align-wrap">
+					<div class="align">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3 col">
+								<h2 class="counter-aside-heading">
+									<strong class="countdown element-block">150</strong>
+									<strong class="text element-block">PLUMBERS</strong>
+								</h2>
+							</div>
+							<div class="col-xs-12 col-sm-3 col">
+								<h2 class="counter-aside-heading">
+									<strong class="countdown element-block">280</strong>
+									<strong class="text element-block">ELECTRICIAN</strong>
+								</h2>
+							</div>
+							<div class="col-xs-12 col-sm-3 col">
+								<h2 class="counter-aside-heading">
+									<strong class="countdown element-block">750</strong>
+									<strong class="text element-block">PAINTERS</strong>
+								</h2>
+							</div>
+							<div class="col-xs-12 col-sm-3 col">
+								<h2 class="counter-aside-heading">
+									<strong class="countdown element-block">1200</strong>
+									<strong class="text element-block">HAIR STYLIST</strong>
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			
+			<!-- course search aside -->
+			<aside class="course-search-aside bg-gray">
+				<!-- course search form -->
+				<form action="#" class="container course-search-form">
+					<label class="element-block text-center font-lato">Search For Course</label>
+					<div class="form-holder">
+						<div class="form-row">
+							<div class="form-group">
+								<select data-placeholder="Category" class="chosen-select-no-single">
+									<option value="0">PLUMBER</option>
+									<option value="0">ELECTRICIAN</option>
+									<option value="0">PAINTER</option>
+									<option value="0">STYLIST</option>
+									<option value="0">TAILOR</option>
+									<option value="0">CARPENTER</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select data-placeholder="location" class="chosen-select-no-single">
+									<option value="0">LAGOS</option>
+									<option value="0">OGUN</option>
+									<option value="0">OYO</option>
+								</select>
+							</div>
+						</div>
+						<button type="button" class="btn btn-theme btn-warning no-shrink text-uppercase">Search</button>
+					</div>
+				</form>
+			</aside>
+			<!-- categories aside -->
+			<aside class="bg-cover categories-aside text-center" style="background-image: url(images/handyman.jpg );">
+				<div class="container holder">
+					<!-- categories list -->
+					<ul class="list-unstyled categories-list">
+						<li>
+							<a href="#">
+								<div class="align">
+									<span class="icn-wrap">
+										<img src="images/pliers.svg" width="43" height="43" alt="image description">
+									</span>
+									<strong class="h h5 element-block text-uppercase">ELECTRICIAN</strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="align">
+									<span class="icn-wrap">
+										<img src="images/tap.svg" width="44" height="48" alt="image description">
+									</span>
+									<strong class="h h5 element-block text-uppercase">PLUMBER</strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="align">
+									<span class="icn-wrap">
+										<img src="images/scissors-and-comb.svg" width="51" height="42" alt="image description">
+									</span>
+									<strong class="h h5 element-block text-uppercase">HAIR STYLIST</strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="align">
+									<span class="icn-wrap">
+										<img src="images/paint-brush.svg" width="51" height="42" alt="image description">
+									</span>
+									<strong class="h h5 element-block text-uppercase">PAINTING</strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="align">
+									<span class="icn-wrap">
+										<img src="images/sewing-machine.svg" width="51" height="39" alt="image description">
+									</span>
+									<strong class="h h5 element-block text-uppercase">FASHION DESIGNER</strong>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="align">
+									<span class="icn-wrap">
+										<img src="images/welding-machine.svg" width="51" height="51" alt="image description">
+									</span>
+									<strong class="h h5 element-block text-uppercase">WELDER</strong>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<!-- getstarted block -->
+			
+				<!-- getstarted bar -->
+				
+			</article>
+			<!-- testimonials block -->
+			<section class="testimonials-block text-center bg-gray" style="background-image: url(images/bg-pattern01.png);">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+							<h2>What People Say</h2>
+							<!-- testimonail slider -->
+							<div class="slick-slider slider testimonail-slider">
+								<div>
+									<!-- testimonial quote -->
+									<blockquote class="testimonial-quote font-roboto">
+										<p>“ good services provided.”</p>
+										<cite class="element-block font-lato">
+											<span class="avatar rounded-circle element-block">
+												<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
+											</span>
+											<strong class="element-block h5 h">Nethor Doct -<span class="text-gray">Developer</span></strong>
+										</cite>
+									</blockquote>
+								</div>
+								<div>
+									<!-- testimonial quote -->
+									<blockquote class="testimonial-quote font-roboto">
+										<p>“ HANDSKILLS ARTISANS ARE SO GOOD”</p>
+										<cite class="element-block font-lato">
+											<span class="avatar rounded-circle element-block">
+												<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
+											</span>
+											<strong class="element-block h5 h">Nethor Doct -<span class="text-gray">Developer</span></strong>
+										</cite>
+									</blockquote>
+								</div>
+								<div>
+									<!-- testimonial quote -->
+									<blockquote class="testimonial-quote font-roboto">
+										<p>“HANDSKILLS is simply the best when it comes to home services . a good and experienced plumber came to repair my kitchen sink . infact i am really glad i called handskills”</p>
+										<cite class="element-block font-lato">
+											<span class="avatar rounded-circle element-block">
+												<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
+											</span>
+											<strong class="element-block h5 h">Niyi jones -<span class="text-gray">Developer</span></strong>
+										</cite>
+									</blockquote>
+								</div>
+								<div>
+									testimonial quote
+									<blockquote class="testimonial-quote font-roboto">
+										<p>“ lorem ipsum”</p>
+										<cite class="element-block font-lato">
+											<span class="avatar rounded-circle element-block">
+												<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
+											</span>
+											<strong class="element-block h5 h">David -<span class="text-gray">Developer</span></strong>
+										</cite>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- news block -->
+			<section class="news-block container">
+				<header class="seperator-head text-center">
+					<h2>RECENT PROJECTS</h2>
+					<p>.</p>
+				</header>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<!-- news post -->
+						<article class="news-post">
+							<div class="aligncenter">
+								<a href="blog-single.html"><img src="images/suit.jpg" alt="image desciption"></a>
+							</div>
+							<h3><a href="blog-single.html">GRADUATION SUIT</a></h3>
+							<p>This suit is made by our fashion designer MR KOKU</p>
+							<time datetime="2011-01-12" class="time text-uppercase text-gray">APR 02,2019  by <a href="blog-single.html">KOKU ADEBAYO</a></time>
+						</article>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<!-- news post -->
+						<article class="news-post">
+							<div class="aligncenter">
+								<a href="blog-single.html"><img src="images/suit.jpg" alt="image desciption"></a>
+							</div>
+							<h3><a href="blog-single.html">GRADUATION SUIT</a></h3>
+							<p>This suit is made by our fashion designer MR KOKU</p>
+							<time datetime="2011-01-12" class="time text-uppercase text-gray">APR 02,2019  by <a href="blog-single.html">KOKU ADEBAYO</a></time>
+						</article>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<!-- news post -->
+						<article class="news-post">
+							<div class="aligncenter">
+								<a href="blog-single.html"><img src="images/suit.jpg" alt="image desciption"></a>
+							</div>
+							<h3><a href="blog-single.html">GRADUATION SUIT</a></h3>
+							<p>This suit is made by our fashion designer MR KOKU</p>
+							<time datetime="2011-01-12" class="time text-uppercase text-gray">APR 02,2019  by <a href="blog-single.html">KOKU ADEBAYO</a></time>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- subscription aside block -->
+			<aside class="subscription-aside-block bg-theme text-white">
+				<!-- newsletter sub form -->
+				<form action="#" class="container newsletter-sub-form">
+					<div class="row form-holder">
+						<div class="col-xs-12 col-sm-6 col">
+							<div class="text-wrap">
+								<span class="element-block icn no-shrink rounded-circle"><i class="far fa-envelope-open"><span class="sr-only">icn</span></i></span>
+								<div class="inner-wrap">
+									<label for="email">Signup for Newsletter</label>
+									<p>Subscribe now and receive weekly newsletter with new updates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col">
+							<div class="input-group">
+								<input type="email" id="email" class="form-control" placeholder="Enter your email&hellip;">
+								<span class="input-group-btn">
+									<button class="btn btn-dark text-uppercase" type="button">Submit</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</aside>
+		</main>
+		<!-- footer area container -->
+		<div class="footer-area bg-dark text-gray">
+			<!-- aside -->
+			<aside class="aside container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-3 col">
+						<div class="logo"><a href="home.html"><img src="images/logo.png" alt="studyLMS"></a></div>
+						<p>We have over 5 years experience providing experts to work for individuals. Our Investment Committee brings cades the industry expertise in driving our investment approach. </p>
+						<a href="#" class="btn btn-default text-uppercase">Start Leaning Now</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 col hidden-xs">
+						<h3>Popular workers</h3>
+						<!-- widget cources list -->
+						<ul class="widget-cources-list list-unstyled">
+							<li>
+								<a href="course-single.html">
+									<div class="alignleft">
+										<img src="http://placehold.it/60x60" alt="image description">
+									</div>
+									<div class="description-wrap">
+										<h4>Introduction to Mobile Apps Development</h4>
+										<strong class="price text-primary element-block font-lato text-uppercase">$99.00</strong>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="course-single.html">
+									<div class="alignleft">
+										<img src="http://placehold.it/60x60" alt="image description">
+									</div>
+									<div class="description-wrap">
+										<h4>Become a Professional Film Maker</h4>
+										<strong class="price text-success element-block font-lato text-uppercase">Free</strong>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="course-single.html">
+									<div class="alignleft">
+										<img src="http://placehold.it/60x60" alt="image description">
+									</div>
+									<div class="description-wrap">
+										<h4>Swift Programming For Beginners</h4>
+										<strong class="price text-primary element-block font-lato text-uppercase">$75.00</strong>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<nav class="col-xs-12 col-sm-6 col-md-3 col">
+						<h3>Quick Links</h3>
+						<!-- fooer navigation -->
+						<ul class="fooer-navigation list-unstyled">
+							<li><a href="#">All Courses</a></li>
+							<li><a href="#">Summer Sessions</a></li>
+							<li><a href="#">Recent Exams</a></li>
+							<li><a href="#">Professional Courses</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">All Courses</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</nav>
+					<div class="col-xs-12 col-sm-6 col-md-3 col">
+						<h3>contact us</h3>
+						<p>If you want to contact us about any issue our support available to help you 8am-7pm Monday to saturday.</p>
+						<!-- ft address -->
+						<address class="ft-address">
+							<dl>
+								<dt><span class="fas fa-map-marker"><span class="sr-only">marker</span></span></dt>
+								<dd>Address: 9015 Sunset Boulevard United Kingdom</dd>
+								<dt><span class="fas fa-phone-square"><span class="sr-only">phone</span></span></dt>
+								<dd>Call: <a href="tel:+2156237532">+ 215 623 7532</a></dd>
+								<dt><span class="fas fa-envelope-square"><span class="sr-only">email</span></span></dt>
+								<dd>Email: <a href="mailto:info@Studylms.com">info@Studylms.com</a></dd>
+							</dl>
+						</address>
+					</div>
+				</div>
+			</aside>
+			<!-- page footer -->
+			<footer id="page-footer" class="font-lato">
+				<div class="container">
+					<div class="row holder">
+						<div class="col-xs-12 col-sm-push-6 col-sm-6">
+							<ul class="socail-networks list-unstyled">
+								<li><a href="#"><span class="fab fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fab fa-instagram"></span></a></li>
+								<li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-pull-6 col-sm-6">
+							<p><a href="#">Studylms</a> | &copy; 2018 <a href="#">DesignFalls</a>, All rights reserved</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- back top of the page -->
+		<span id="back-top" class="text-center fa fa-caret-up"></span>
+		<!-- loader of the page -->
+		<div id="loader" class="loader-holder">
+			<div class="block"><img src="{% static 'images/svg/hearts.svg' %}" width="100" alt="loader"></div>
+		</div>
+	</div>
+	<div class="popup-holder">
+		<div id="popup1" class="lightbox-demo">
+			<form action="#" class="user-log-form">
+				<h2>Login Form</h2>
+				<div class="form-group">
+					<input type="text" class="form-control element-block" placeholder="Username or email address *">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control element-block" placeholder="Password *">
+				</div>
+				<div class="btns-wrap">
+					<div class="wrap">
+						<label for="rem" class="custom-check-wrap fw-normal font-lato">
+							<input type="checkbox" id="rem" class="customFormReset">
+							<span class="fake-label element-block">Remember me</span>
+						</label>
+						<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
+					</div>
+					<div class="wrap text-right">
+						<p>
+							<a href="#" class="forget-link">Lost your Password?</a>
+						</p>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="popup2" class="lightbox-demo">
+			<form action="#" class="user-log-form">
+				<h2>Register Form</h2>
+				<div class="form-group">
+					<input type="email" class="form-control element-block" placeholder="Email address *">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control element-block" placeholder="Password *">
+				</div>
+				<div class="btns-wrap">
+					<div class="wrap">
+						<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- include jQuery -->
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<!-- include jQuery -->
+	<script src="{% static 'js/plugins.js' %}"></script>
+	<!-- include jQuery -->
+	<script src="{% static 'js/jquery.main.js' %}"></script>
+	<!-- include jQuery -->
+	<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
+</body>
+</html>
