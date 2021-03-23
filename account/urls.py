@@ -11,6 +11,7 @@ urlpatterns = [
   path('login/', auth_views.LoginView.as_view(), name='login'),
   path('logout/', auth_views.LogoutView.as_view(), name='logout'),
   path('', views.dashboard, name='dashboard'),
+  path('profile/', views.profile, name='profile'),
   path('password_change/',auth_views.PasswordChangeView.as_view(),name='password_change'),
   path('password_change/done/',auth_views.PasswordChangeDoneView.as_view(),name='password_change_done'),
   path('password_reset/',auth_views.PasswordResetView.as_view(),name='password_reset'),
@@ -19,6 +20,9 @@ urlpatterns = [
   path('reset/done/',auth_views.PasswordResetCompleteView.as_view(),name='password_reset_complete'),
   path('register/', views.register, name='register'),
   path('edit/', views.edit, name='edit'),
+  path('search_result/', views.search_result, name='search_result'),
+  path('single_artisan_profile/', views.single_artisan_profile, name='single_artisan_profile'),
+  # path('dashboard/', views.dashboard, name='dashboard'),
  
 
 

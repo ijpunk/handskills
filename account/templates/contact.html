@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,30 +11,31 @@
 	<!-- set the HandheldFriendly -->
 	<meta name="HandheldFriendly" content="True">
 	<!-- set the description -->
-	<meta name="description" content="STUDYLMS HTML Template">
+	<meta name="description" content="HANDSKILLS APP">
 	<!-- set the Keyword -->
 	<meta name="keywords" content="">
-	<meta name="author" content="STUDYLMS HTML Template">
+	<meta name="author" content="handskills app">
 	<!-- set the page title -->
-	<title>STUDYLMS HTML Template</title>
+	<title>HANDSKILLS</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="{% static 'css/colors.css' %}">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<!-- include the site responsive stylesheet -->
-	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="images">
 </head>
 <body>
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
-		<header id="page-header">
+		<header id="page-header" class="page-header-stick">
 			<!-- top bar -->
 			<div class="top-bar bg-dark text-gray">
 				<div class="container">
@@ -40,25 +44,21 @@
 							<!-- bar links -->
 							<ul class="font-lato list-unstyled bar-links">
 								<li>
-									<a href="tel:+611234567890">
+									<a href="tel:+2343855303">
 										<strong class="dt element-block text-capitalize hd-phone">Call :</strong>
-										<strong class="dd element-block hd-phone">+(61) 123 456 7890</strong>
+										<strong class="dd element-block hd-phone">+(234) 8113855303 </strong>
 										<i class="fas fa-phone-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">phone</span></i>
 									</a>
 								</li>
-								<li>
-									<a href="mailto:&#069;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;">
-										<strong class="dt element-block text-capitalize hd-phone">Email :</strong>
-										<strong class="dd element-block hd-phone">&#069;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;</strong>
-										<i class="fas fa-envelope-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">email</span></i>
-									</a>
-								</li>
+								
 							</ul>
 						</div>
 						<div class="col-xs-3 col justify-end">
 							<!-- user links -->
 							<ul class="list-unstyled user-links fw-bold font-lato">
-								<li><a href="#popup1" class="lightbox">Login</a> <span class="sep">|</span> <a href="#popup2" class="lightbox">Register</a></li>
+								<li><a href="{% url "logout" %} " >Logout</a><span class="sep lightbox">  |</span>
+								<a href="{% url "login" %} " class="out">Login</a></li>
+								<!-- <li><a href="{% url "login" %}" class="lightbox">Login</a> <span class="sep">|</span> <a href="{% url "register" %}" class="lightbox">Register</a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -72,7 +72,8 @@
 							<!-- logo -->
 							<div class="logo">
 								<a href="home.html">
-									<img src="images/logo-dark.png" alt="studylms">
+									<img class="hidden-xs" src="{% static 'images/logo.png' %}" alt="studylms">
+									<img class="hidden-sm hidden-md hidden-lg" src="[% static 'images/logo-dark.png' %}" alt="studylms">
 								</a>
 							</div>
 						</div>
@@ -91,56 +92,24 @@
 								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 									<!-- main navigation -->
 									<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">home</a>
-											<ul class="dropdown-menu">
-												<li><a href="home.html">Home 1</a></li>
-												<li><a href="home2.html">Home 2</a></li>
-											</ul>
+										<li>
+											<a href="home.html" role="button" aria-haspopup="true" aria-expanded="false">home</a>
+											
 										</li>
 										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
-											<ul class="dropdown-menu">
-												<li><a href="courses-list.html">Course List</a></li>
-												<li><a href="course-single.html">Course Single</a></li>
-											</ul>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
-											<ul class="dropdown-menu">
-												<li><a href="events-list.html">Event List</a></li>
-												<li><a href="event-sigle.html">Event Single</a></li>
-											</ul>
-										</li>
+											<a href="courses-list.html" 
+											role="button" aria-haspopup="true" aria-expanded="false">artisans</a>
+											
+									
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 											<ul class="dropdown-menu">
-												<li><a href="404.html">404 Page</a></li>
 												<li><a href="about-us.html">About us</a></li>
-												<li><a href="forum.html">Forum Page</a></li>
-												<li><a href="forum-single.html">Forum Single</a></li>
-												<li><a href="instructors-list.html">Instructors List</a></li>
-												<li><a href="instructor-single.html">Instructors Single</a></li>
-												<li><a href="login-register.html">Login &amp; Register</a></li>
+												<li><a href="instructors-list.html">workers List</a></li>								
+											   <li><a href="login-register.html">Login &amp; Register</a></li>
 											</ul>
 										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-											<ul class="dropdown-menu">
-												<li><a href="blog.html">Blog List</a></li>
-												<li><a href="blog-single.html">Blog Single</a></li>
-											</ul>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-											<ul class="dropdown-menu">
-												<li><a href="shop.html">Shop List</a></li>
-												<li><a href="single-product.html">Shop Single</a></li>
-												<li><a href="cartage.html">Cart Page</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
-											</ul>
-										</li>
-										<li><a href="contact.html">coNTACT</a></li>
+										<li><a href="contact.html">CONTACT</a></li>
 									</ul>
 								</div>
 								<!-- navbar form -->

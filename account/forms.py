@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import Profile
+from .models import Portfolio
 
 
 class LoginForm(forms.Form):
@@ -26,11 +27,16 @@ class UserRegistrationForm(forms.ModelForm):
 class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'email')
+        fields = ('first_name', 'last_name', 'email',)
 class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('date_of_birth', 'photo')
+        fields = ('date_of_birth',  'occupation', 'experience', 'address', 'phone', 'country', 'state', 'city', 'photo',)
+
+class PortfolioEditForm(forms.ModelForm):
+    class Meta:
+        model = Portfolio
+        fields = ('description',  'mywork1', 'mywork2', 'mywork3', 'mywork4', 'portfolio1', 'portfolio2', 'portfolio3', 'portfolio4',)
 
 
 

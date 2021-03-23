@@ -18,12 +18,15 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from account import views
+from django.contrib.auth import views as auth_views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),  path('home/', views.home, name='home'),
+    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('dashboard/', views.dashboard, name='dashboard'),
          
 ]
 

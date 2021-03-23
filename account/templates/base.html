@@ -17,7 +17,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-    <div id="header">
+
+    
+    <!-- <div id="header">
     <span class="logo">“HANDSKILLS</span>
     {% if request.user.is_authenticated %}
     <ul class="menu">
@@ -36,14 +38,30 @@
     {% if request.user.is_authenticated %}
     Hello {{ request.user.first_name }},
     <a href="{% url "logout" %}">Logout</a>
-    {% else %}
+     {% else %} 
     <a href="{% url "login" %}">Log-in</a>
     {% endif %}
     </span>
     </div>
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-    </body>
+    <div id="content"> -->
+        <div style="border: 2px solid transparent;min-height: 100vh;min-width: 100vh;background-position: center center; background-repeat: no-repeat; background-size: 
+        cover; background-image: url({% static 'images/handymen.jpg' %});">
+            {% block content %}
+            
+            {% endblock %}
+        </div>
+
+
+  
+
+</div>
+<!-- include jQuery -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<!-- include jQuery -->
+<script src="{% static 'js/plugins.js' %}"></script>
+<!-- include jQuery -->
+<script src="{% static 'js/jquery.main.js' %}"></script>
+<!-- include jQuery -->
+<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
+</body>
 </html>

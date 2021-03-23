@@ -1,11 +1,36 @@
 {% extends "base.html" %}
 {% block title %}Create an account{% endblock %}
+{% load crispy_forms_tags %}
 {% block content %}
- <h1>Create an account</h1>
- <p>Please, sign up using the following form:</p>
- <form method="post">
- {{ user_form.as_p }}
- {% csrf_token %}
- <p><input type="submit" value="Create my account"></p>
- </form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="http://localhost:8080/css/base.css">
+    </head>
+    <body>
+        <div class="row justify-content-center" style="margin-top:140px; margin-bottom:60px;">
+            <div class="col-sm-6">
+                <div class="card bg-light shadow-lg"> 
+                    <div class="card-body"> 
+                            <h1>Create an account</h1>
+                            <p>Please, sign up using the following form:</p>
+                            <form method="post">
+                                {% csrf_token %}
+                                <label for="type">Select account type:</label>
+                                <select name="type" id="type" class="form-control">
+                                    <option selected disabled>---</option>
+                                    <option value="artisan">Artisan</option>
+                                    <option value="client">Client</option>
+                                </select>
+                                {{ user_form|crispy }}
+                                <br>
+                                <p><input type="submit" value="Create my account"></p>
+                             </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
 {% endblock %}
